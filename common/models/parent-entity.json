@@ -1,0 +1,29 @@
+{
+  "name": "parentEntity",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "childEntities": {
+      "type": "hasMany",
+      "model": "childEntity",
+      "foreignKey": ""
+    },
+    "parentEntityLeaders": {
+      "type": "hasMany",
+      "model": "parentEntityLeader",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

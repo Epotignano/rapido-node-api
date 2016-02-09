@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "childEntity": {
+    "dataSource": "db",
+    "public": true
+  },
+  "childEntityLeader": {
+    "dataSource": "db",
+    "public": true
+  },
+  "childEntityWorker": {
+    "dataSource": "db",
+    "public": true
+  },
+  "parentEntity": {
+    "dataSource": "db",
+    "public": true
+  },
+  "work": {
+    "dataSource": "db",
+    "public": true
+  },
+  "task": {
+    "dataSource": "db",
+    "public": true
+  },
+  "parentEntityLeader": {
+    "dataSource": "db",
+    "public": true
+  },
+  "workSection": {
+    "dataSource": "db",
+    "public": true
+  }
+}

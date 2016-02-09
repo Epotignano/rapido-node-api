@@ -1,0 +1,46 @@
+{
+  "name": "work",
+  "plural": "works",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "initDate": {
+      "type": "date",
+      "required": true
+    },
+    "estimatedFinishDate": {
+      "type": "date",
+      "required": true
+    },
+    "realFinishDate": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tasks": {
+      "type": "hasMany",
+      "model": "task",
+      "foreignKey": ""
+    },
+    "parentEntityLeaders": {
+      "type": "hasMany",
+      "model": "parentEntityLeader",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

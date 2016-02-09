@@ -1,0 +1,19 @@
+{
+  "name": "parentEntityLeader",
+  "plural": "parentEntityLeaders",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "section": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

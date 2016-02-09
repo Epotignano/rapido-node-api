@@ -1,0 +1,51 @@
+{
+  "name": "task",
+  "plural": "tasks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "initDate": {
+      "type": "date",
+      "required": true
+    },
+    "finishDate": {
+      "type": "date",
+      "required": true
+    },
+    "completion": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "parentEntityLeader": {
+      "type": "hasOne",
+      "model": "parentEntityLeader",
+      "foreignKey": ""
+    },
+    "childEntityLeaders": {
+      "type": "hasMany",
+      "model": "childEntityLeader",
+      "foreignKey": ""
+    },
+    "childEntityWorkers": {
+      "type": "hasMany",
+      "model": "childEntityWorker",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
